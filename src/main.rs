@@ -44,8 +44,11 @@ fn main() {
         io::stdin().read_line(&mut answer).expect("F");
 
         match answer.to_lowercase().trim().eq(random_kv_pair.1) {
-            true => println!("Your answer was correct"),
-            false => println!("Your answer was false"),
+            true => println!("Your answer was correct!\n"),
+            false => println!(
+                "Your answer was incorrect. Expected answer was: {}\n",
+                random_kv_pair.1
+            ),
         }
     }
 }
